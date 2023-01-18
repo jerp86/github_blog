@@ -1,10 +1,20 @@
+import { PostFromList } from './components/PostFromList'
 import { Profile } from './components/Profile'
 import { SearchInput } from './components/SearchInput'
-import { HomeContainer } from './styles'
+import { PostsListContainer } from './styles'
 
 export const Home = () => (
-  <HomeContainer>
+  <>
     <Profile />
     <SearchInput />
-  </HomeContainer>
+
+    <PostsListContainer>
+      <PostFromList />
+      <PostFromList />
+      <PostFromList />
+      <PostFromList />
+      <PostFromList />
+      <PostFromList />
+    </PostsListContainer>
+  </>
 )
