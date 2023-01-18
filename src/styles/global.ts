@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
     cursor: not-allowed;
   }
 
-  body, input, button {
+  body, input, button, span {
     font: 400 1.6rem 'Nunito', sans-serif;
     line-height: 160%;
   }
