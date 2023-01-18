@@ -33,7 +33,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  button:not(:disabled) {
+  button:not(:disabled), a {
     cursor: pointer;
   }
 
