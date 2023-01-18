@@ -59,5 +59,9 @@ export const GlobalStyles = createGlobalStyle`
   .container {
     width: min(100%, 86.4rem);
     margin: 0 auto;
+
+    @media only screen and (max-width: 864px) {
+      padding: 0 1.6rem;
+    }
   }
 `
