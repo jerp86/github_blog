@@ -1,6 +1,9 @@
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./styles/global";
+import { defaultTheme } from "./styles/themes/default";
+
 export const App = () => (
-  <div>
-    <img src="/blogIcon.svg" alt="" />
-    <h1>Hello Github Blog</h1>
-  </div>
+  <ThemeProvider theme={defaultTheme}>
+    <GlobalStyles />
+  </ThemeProvider>
 )
