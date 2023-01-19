@@ -23,7 +23,6 @@ export const PostHeader = () => {
           Voltar
         </ExternalLink>
         <ExternalLink
-          icon={faArrowUpRightFromSquare}
           href="https://github.com/jerp86"
           target="_blank"
           rel="noopener noreferrer"
