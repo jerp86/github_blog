@@ -14,6 +14,11 @@ export const ProfileContainer = styled.section`
   @media only screen and (max-width: 440px) {
     padding: 1.6rem 2rem;
     gap: 1.6rem;
+
+    img {
+      width: 7.4rem;
+      height: 7.4rem;
+    }
   }
 `
 
@@ -22,11 +27,6 @@ export const ProfilePicture = styled.img`
   height: 14.8rem;
   border-radius: 8px;
   object-fit: cover;
-
-  @media only screen and (max-width: 440px) {
-    width: 7.4rem;
-    height: 7.4rem;
-  }
 `
 
 export const ProfileDetails = styled.div`
@@ -41,35 +41,6 @@ export const ProfileDetails = styled.div`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-  }
-
-  ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2.4rem;
-    margin-top: auto;
-
-    li {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      color: ${({ theme }) => theme.subtitle};
-
-      svg {
-        color: ${({ theme }) => theme.label};
-        width: 1.8rem;
-        height: 1.8rem;
-      }
-    }
-
-    @media only screen and (max-width: 440px) {
-      gap: 1.2rem;
-
-      li {
-        gap: 0.4rem;
-      }
-    }
   }
 `
 
