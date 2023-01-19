@@ -1,25 +1,38 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import {
-  faArrowUpRightFromSquare,
   faCalendarDay,
   faChevronLeft,
   faComment,
 } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ExternalLink } from '../../../../components/ExternalLink'
 import { Info } from '../../../../components/Info'
 import { PostHeaderContainer } from './styles'
 
 export const PostHeader = () => {
+  const navigate = useNavigate()
+
   const tag = [
     { icon: faGithub, text: 'jerp86' },
     { icon: faCalendarDay, text: 'Há 1 dia' },
     { icon: faComment, text: '5 comentários' },
   ]
 
+  const handleGoBack = useCallback(() => {
+    navigate(-1)
+  }, [navigate])
+
   return (
     <PostHeaderContainer>
       <header>
-        <ExternalLink icon={faChevronLeft} variant="left" href="#">
+        <ExternalLink
+          icon={<FontAwesomeIcon icon={faChevronLeft} />}
+          variant="iconLeft"
+          as="button"
+          onClick={handleGoBack}
+        >
           Voltar
         </ExternalLink>
         <ExternalLink
