@@ -25,6 +25,14 @@ export const ProfileDetails = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
   ul {
     display: flex;
     align-items: center;
@@ -57,5 +65,11 @@ export const ProfileHeader = styled.header`
     font-size: 2.4rem;
     line-height: 130%;
     color: ${({ theme }) => theme.title};
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
   }
 `
