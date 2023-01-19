@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const ExternalLinkContainer = styled.a`
+interface ExternalLinkContainerProps {
+  variant?: 'iconLeft'
+}
+
+export const ExternalLinkContainer = styled.a<ExternalLinkContainerProps>`
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -24,4 +28,10 @@ export const ExternalLinkContainer = styled.a`
     border-color: ${({ theme }) => theme.blue};
     transition: 0.4s;
   }
+
+  ${({ variant }) =>
+    variant === 'iconLeft' &&
+    css`
+      flex-direction: row-reverse;
+    `}
 `
