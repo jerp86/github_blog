@@ -1,7 +1,7 @@
-import { PostContainer } from './styles'
+import { PostHeader } from './components/PostHeader'
 
 export const Post = () => (
-  <PostContainer>
-    <h1>Post</h1>
-  </PostContainer>
+  <>
+    <PostHeader />
+  </>
 )
