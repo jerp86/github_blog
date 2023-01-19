@@ -10,7 +10,6 @@ export const PostHeaderContainer = styled.section`
   padding: 3.2rem;
   display: flex;
   flex-direction: column;
-  /* gap: 0.8rem; */
 
   > header {
     display: flex;
