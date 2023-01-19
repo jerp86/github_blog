@@ -12,6 +12,7 @@ export const InfoContainer = styled.ul`
     align-items: center;
     gap: 0.8rem;
     color: ${({ theme }) => theme.subtitle};
+    line-height: 0px;
 
     svg {
       color: ${({ theme }) => theme.label};
