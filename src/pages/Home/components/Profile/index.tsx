@@ -3,8 +3,6 @@ import {
   faBuilding,
   faUserGroup,
 } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   ProfileHeader,
   ProfileContainer,
@@ -12,6 +10,14 @@ import {
   ProfilePicture,
 } from './styles'
 import { ExternalLink } from '../../../../components/ExternalLink'
+import { Info } from '../../../../components/Info'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
+const tag = [
+  { icon: faGithub, text: 'jerp86' },
+  { icon: faBuilding, text: 'Cygnus.IT' },
+  { icon: faUserGroup, text: '108 seguidores' },
+]
 
 export const Profile = () => (
   <ProfileContainer>
@@ -36,20 +42,7 @@ export const Profile = () => (
         vel mass.
       </p>
 
-      <ul>
-        <li>
-          <FontAwesomeIcon icon={faGithub} />
-          jerp86
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faBuilding} />
-          Cygnus.IT
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faUserGroup} />
-          108 seguidores
-        </li>
-      </ul>
+      <Info tag={tag} />
     </ProfileDetails>
   </ProfileContainer>
 )
