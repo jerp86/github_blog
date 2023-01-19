@@ -5,16 +5,20 @@ import { ExternalLinkContainer } from './styles'
 
 type ExternalLinkProps = ComponentProps<typeof ExternalLinkContainer> & {
   icon: IconDefinition
+  variant?: 'left' | 'right'
 }
 
 export const ExternalLink = ({
   children,
   icon,
+  variant = 'right',
   ...rest
 }: ExternalLinkProps) => (
   <ExternalLinkContainer {...rest}>
+    {variant === 'left' && <FontAwesomeIcon icon={icon} />}
+
     {children}
 
-    <FontAwesomeIcon icon={icon} />
+    {variant === 'right' && <FontAwesomeIcon icon={icon} />}
   </ExternalLinkContainer>
 )
