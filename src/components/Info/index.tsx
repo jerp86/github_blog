@@ -1,21 +1,23 @@
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faBuilding, faUserGroup } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { InfoContainer } from './styles'
 
-export const Info = () => (
+interface Tag {
+  icon: IconDefinition
+  text: string
+}
+
+interface InfoProps {
+  tag: Tag[]
+}
+
+export const Info = ({ tag }: InfoProps) => (
   <InfoContainer>
-    <li>
-      <FontAwesomeIcon icon={faGithub} />
-      jerp86
-    </li>
-    <li>
-      <FontAwesomeIcon icon={faBuilding} />
-      Cygnus.IT
-    </li>
-    <li>
-      <FontAwesomeIcon icon={faUserGroup} />
-      108 seguidores
-    </li>
+    {tag.map(({ icon, text }) => (
+      <li key={crypto.randomUUID()}>
+        <FontAwesomeIcon icon={icon} />
+        {text}
+      </li>
+    ))}
   </InfoContainer>
 )
