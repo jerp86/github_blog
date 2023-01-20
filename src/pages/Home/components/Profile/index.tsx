@@ -1,13 +1,12 @@
 import { faBuilding, faUserGroup } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import {
   ProfileHeader,
   ProfileContainer,
   ProfileDetails,
   ProfilePicture,
 } from './styles'
-import { ExternalLink } from '../../../../components/ExternalLink'
-import { Info } from '../../../../components/Info'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { ExternalLink, Info } from '../../../../components'
 
 export const Profile = () => {
   const tag = [

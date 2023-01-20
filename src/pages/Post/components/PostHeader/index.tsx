@@ -7,8 +7,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ExternalLink } from '../../../../components/ExternalLink'
-import { Info } from '../../../../components/Info'
+import { ExternalLink, Info } from '../../../../components'
 import { PostHeaderContainer } from './styles'
 
 export const PostHeader = () => {
