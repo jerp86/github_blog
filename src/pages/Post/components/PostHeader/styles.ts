@@ -31,6 +31,7 @@ export const PostHeaderContainer = styled.section`
   }
 
   @media only screen and (max-width: 440px) {
+    margin-top: -4.4rem;
     padding: 1.6rem;
     gap: 0.4rem;
   }

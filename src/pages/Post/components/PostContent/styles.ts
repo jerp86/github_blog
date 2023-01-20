@@ -37,4 +37,9 @@ export const PostContentContainer = styled.section`
       }
     }
   }
+
+  @media only screen and (max-width: 440px) {
+    padding: 2rem 1.6rem;
+    margin-bottom: 6.4rem;
+  }
 `
