@@ -54,8 +54,10 @@ Como se tratou de um desafio, foi necessário alguns conhecimentos além dos abo
 - [Json-Server](https://github.com/typicode/json-server)
 - [Font Awesome](https://fontawesome.com/)
 - [React-Hook-Form](https://www.react-hook-form.com/)
+- [react-markdown](https://github.com/remarkjs/react-markdown#readme)
 - [React-Router-Dom](https://github.com/remix-run/react-router#readme)
-- [Styled-Components](https://styled-components.com/) 💅🏽
+- [React Syntax Highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter#readme)
+- [💅🏽 Styled-Components](https://styled-components.com/)
 - [Zod](https://github.com/colinhacks/zod)
 - [@rocketseat/eslint-config](https://github.com/rocketseat/eslint-config-rocketseat#readme)
 
