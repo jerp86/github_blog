@@ -21,6 +21,15 @@ export const PostFromListContainer = styled(Link)`
     border-color: ${({ theme }) => theme.label};
     transition: 0.4s;
   }
+
+  @media only screen and (max-width: 440px) {
+    max-width: calc(100vw - 3.2rem);
+    padding: 1.6rem;
+
+    p {
+      -webkit-line-clamp: 3;
+    }
+  }
 `
 
 export const PostFromListHeader = styled.header`
@@ -46,5 +55,10 @@ export const PostFromListHeader = styled.header`
     font-size: 1.4rem;
     color: ${({ theme }) => theme.span};
     text-align: right;
+  }
+
+  @media only screen and (max-width: 440px) {
+    gap: 0.8rem;
+    margin-bottom: 1rem;
   }
 `

@@ -26,6 +26,12 @@ export const InfoContainer = styled.ul`
 
     li {
       gap: 0.4rem;
+      font-size: 1.2rem;
+
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
     }
   }
 `

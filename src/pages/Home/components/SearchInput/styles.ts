@@ -24,6 +24,12 @@ export const SearchInputContainer = styled.form`
       color: ${({ theme }) => theme.label};
     }
   }
+
+  @media only screen and (max-width: 440px) {
+    gap: 0.6rem;
+    margin-top: 3.6rem;
+    margin-bottom: 2.4rem;
+  }
 `
 
 export const SearchHeader = styled.header`

@@ -12,7 +12,8 @@ export const ProfileContainer = styled.section`
   gap: 3.2rem;
 
   @media only screen and (max-width: 440px) {
-    padding: 1.6rem 2rem;
+    margin-top: -4.4rem;
+    padding: 1.6rem;
     gap: 1.6rem;
 
     img {
@@ -42,6 +43,10 @@ export const ProfileDetails = styled.div`
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
+
+  @media only screen and (max-width: 440px) {
+    gap: 0.8rem;
+  }
 `
 
 export const ProfileHeader = styled.header`
@@ -60,5 +65,9 @@ export const ProfileHeader = styled.header`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+  }
+
+  @media only screen and (max-width: 440px) {
+    margin-bottom: 0;
   }
 `

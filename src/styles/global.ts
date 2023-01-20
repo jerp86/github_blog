@@ -64,4 +64,10 @@ export const GlobalStyles = createGlobalStyle`
       padding: 0 1.6rem;
     }
   }
+
+  @media only screen and (max-width: 440px) {
+    :root {
+      font-size: 55.55%;
+    }
+  }
 `
