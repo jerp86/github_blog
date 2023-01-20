@@ -90,6 +90,7 @@ Para essa aplicação foi fornecido um layout para que fosse possível seguir e 
 ## :abc: Fontes utilizadas
 
 - [Nunito](https://fonts.google.com/specimen/Nunito)
+- [Fira Code](https://fonts.google.com/specimen/Fira+Code)
 
 
 ## :zap: Como executar
