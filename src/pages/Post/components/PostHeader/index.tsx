@@ -5,23 +5,29 @@ import {
   faComment,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ExternalLink, Info } from '../../../../components'
+import { IPost } from '../../../../context/GithubContext'
+import { relativeDateFormatter } from '../../../../utils/formatter'
 import { PostHeaderContainer } from './styles'
 
-export const PostHeader = () => {
+interface PostHeaderProps {
+  postData: IPost
+}
+
+export const PostHeader = ({ postData }: PostHeaderProps) => {
   const navigate = useNavigate()
+  const handleGoBack = useCallback(() => navigate(-1), [navigate])
 
-  const tag = [
-    { icon: faGithub, text: 'jerp86' },
-    { icon: faCalendarDay, text: 'Há 1 dia' },
-    { icon: faComment, text: '5 comentários' },
-  ]
-
-  const handleGoBack = useCallback(() => {
-    navigate(-1)
-  }, [navigate])
+  const tag = useMemo(
+    () => [
+      { icon: faGithub, text: postData.user.login },
+      { icon: faCalendarDay, text: relativeDateFormatter(postData.created_at) },
+      { icon: faComment, text: `${postData.comments} comentários` },
+    ],
+    [postData],
+  )
 
   return (
     <PostHeaderContainer>
@@ -35,7 +41,7 @@ export const PostHeader = () => {
           Voltar
         </ExternalLink>
         <ExternalLink
-          href="https://github.com/jerp86"
+          href={postData.html_url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -43,7 +49,7 @@ export const PostHeader = () => {
         </ExternalLink>
       </header>
 
-      <h1>JavaScript data types and data structures</h1>
+      <h1>{postData.title}</h1>
 
       <Info tag={tag} />
     </PostHeaderContainer>
