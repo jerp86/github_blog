@@ -1,6 +1,4 @@
-import { PostFromList } from './components/PostFromList'
-import { Profile } from './components/Profile'
-import { SearchInput } from './components/SearchInput'
+import { PostFromList, Profile, SearchInput } from './components'
 import { PostsListContainer } from './styles'
 
 export const Home = () => (
