@@ -45,7 +45,7 @@ export const GithubProvider = ({ children }: GithubProviderProps) => {
   const [posts, setPosts] = useState<IPost[]>([])
   const [profile, setProfile] = useState({} as IProfile)
 
-  const getPosts = useCallback(async (query = '') => {
+  const getListPosts = useCallback(async (query = '') => {
     try {
       setIsLoading(true)
       const encodedQuery = encodeURIComponent(
@@ -58,7 +58,7 @@ export const GithubProvider = ({ children }: GithubProviderProps) => {
     }
   }, [])
 
-  const getProfileData = useCallback(async () => {
+  const getProfileDetails = useCallback(async () => {
     try {
       setIsLoading(true)
       const response = await api.get<IProfile>(`/users/${username}`)
@@ -70,9 +70,9 @@ export const GithubProvider = ({ children }: GithubProviderProps) => {
   }, [])
 
   useEffect(() => {
-    getProfileData()
-    getPosts()
-  }, [getPosts, getProfileData])
+    getProfileDetails()
+    getListPosts()
+  }, [getListPosts, getProfileDetails])
 
   return (
     <GithubContext.Provider value={{ isLoading, posts, profile }}>
