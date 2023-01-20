@@ -1,10 +1,14 @@
 import { SearchHeader, SearchInputContainer } from './styles'
 
-export const SearchInput = () => (
+interface SearchInputProps {
+  numberOfPosts: number
+}
+
+export const SearchInput = ({ numberOfPosts }: SearchInputProps) => (
   <SearchInputContainer>
     <SearchHeader>
       <h3>Publicações</h3>
-      <span>6 publicações</span>
+      <span>{numberOfPosts} publicações</span>
     </SearchHeader>
 
     <input type="text" placeholder="Buscar conteúdo" />
